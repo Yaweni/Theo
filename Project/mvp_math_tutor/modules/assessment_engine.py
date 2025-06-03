@@ -10,7 +10,7 @@ MVP_QUESTION_IDS = ["KNOW-001", "LOGIC-001", "VIS-001", "MEM-001", "ABSTRACT-001
 # MEM-001: Phased Text (memory)
 # ABSTRACT-001: Text Input (abstract, logic)
 
-def load_questions(json_path="data/Onboarding-Easy.json", question_ids=None):
+def load_questions(json_path="../data/Onboarding-Easy.json", question_ids=None):
     """
     Loads assessment questions from the JSON file.
     Filters by question_ids if provided.
