@@ -71,7 +71,7 @@ def display_question(question):
                             st.image(
                                 opt['image_url'],
                                 width=60,  # Fixed small size for options
-                                use_column_width='auto',  # Responsive within container
+                                use_container_width='auto',  # Responsive within container
                                 caption=f"Option {opt['id']}"
                             )
                             option_texts.append(f"Option {opt['id']}")
