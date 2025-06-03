@@ -30,7 +30,7 @@ def get_lesson_topic_name(topic_id):
         return "Understanding Variables"
     return "Unknown Topic"
 
-def load_lesson_part(profile_id, topic_id, part_index, base_path="data/lessons"):
+def load_lesson_part(profile_id, topic_id, part_index, base_path="Project/mvp_math_tutor/data/lessons"):
     """
     Loads a specific part of a lesson for a given profile and topic.
     profile_id: e.g., "PROFILE_STRUCTURED"
@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
     for i in range(MAX_LESSON_PARTS):
         print(f"\n--- Loading {profile1}, Part {i+1} ---")
-        content = load_lesson_part(profile1, topic, i, base_path="../data/lessons") # Adjust path for direct script run
+        content = load_lesson_part(profile1, topic, i, base_path="Project/mvp_math_tutor/data/data/lessons") # Adjust path for direct script run
         if "Error:" not in content:
             print(content[:100] + "...") # Print first 100 chars
         else:
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     # Test with a different profile
     profile2 = PROFILE_CONCEPTUAL_ID
     print(f"\n--- Loading {profile2}, Part 1 ---")
-    content2 = load_lesson_part(profile2, topic, 0, base_path="../data/lessons")
+    content2 = load_lesson_part(profile2, topic, 0, base_path="Project/mvp_math_tutor/data/data/lessons")
     if "Error:" not in content2:
         print(content2[:100] + "...")
     else:
