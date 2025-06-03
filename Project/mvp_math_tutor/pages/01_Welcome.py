@@ -1,7 +1,7 @@
 import streamlit as st
 
 def show_welcome_page():
-    st.title("👋 Welcome to UnlockED 😁")
+    st.title("👋 Welcome to Theo 😁")
     st.subheader("Your AI-Personalized Tutor!")
     
     st.markdown("""
