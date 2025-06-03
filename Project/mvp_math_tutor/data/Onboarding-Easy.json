@@ -4,11 +4,11 @@
         "type": "image",
         "format": "multiple_choice",
         "prompt": "Which image completes the pattern?",
-        "image_url": "./data/assets/Q1-Easy/patterns/pattern1.png",
+        "image_url": "./Project/mvp_math_tutor/data/assets/Q1-Easy/patterns/pattern1.png",
         "options": [
-            {"id": "A", "image_url": "./data/assets/Q1-Easy/options/optionA.png"},
-            {"id": "B", "image_url": "./data/assets/Q1-Easy/options/optionB.png"},
-            {"id": "C", "image_url": "./data/assets/Q1-Easy/options/optionC.png"}
+            {"id": "A", "image_url": "./Project/mvp_math_tutor/data/assets/Q1-Easy/options/optionA.png"},
+            {"id": "B", "image_url": "./Project/mvp_math_tutor/data/assets/Q1-Easy/options/optionB.png"},
+            {"id": "C", "image_url": "./Project/mvp_math_tutor/data/assets/Q1-Easy/options/optionC.png"}
         ],
         "correct": "B",
         "timer": 30,
