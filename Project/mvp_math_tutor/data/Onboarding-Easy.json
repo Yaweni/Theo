@@ -1,0 +1,481 @@
+[
+    {
+        "id": "VIS-001",
+        "type": "image",
+        "format": "multiple_choice",
+        "prompt": "Which image completes the pattern?",
+        "image_url": "./data/assets/Q1-Easy/patterns/pattern1.png",
+        "options": [
+            {"id": "A", "image_url": "./data/assets/Q1-Easy/options/optionA.png"},
+            {"id": "B", "image_url": "./data/assets/Q1-Easy/options/optionB.png"},
+            {"id": "C", "image_url": "./data/assets/Q1-Easy/options/optionC.png"}
+        ],
+        "correct": "B",
+        "timer": 30,
+        "scoring": {"weights": {"visual": 0.9, "logic": 0.1}}
+    },
+
+    {
+        "id": "LOGIC-001",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "Next number: 3, 6, 12, 24, ___?",
+        "correct": "48",
+        "timer": 25,
+        "scoring": {"weights": {"logic": 1.0}}
+    },
+
+    {
+        "id": "SPATIAL-001",
+        "type": "drawing",
+        "format": "canvas",
+        "prompt": "Draw the mirror image of this shape:",
+        "image_url": "/assets/Q3-Easy/shapes/mirror_template.png",
+        "canvas": {"width": 300, "height": 150},
+        "correct": "/assets/Q3-Easy/solutions/mirror_solution.png",
+        "timer": 45,
+        "scoring": {"weights": {"spatial": 0.8, "visual": 0.2}}
+    },
+
+    {
+        "id": "AUD-001",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize this sound sequence:",
+                "content": {
+                    "items": [
+                        {"id": "S1", "sound_file": "/assets/Q4-Easy/sounds/sequence1.mp3"},
+                        {"id": "S2", "sound_file": "/assets/Q4-Easy/sounds/sequence2.wav"}
+                    ],
+                    "play_order": ["S1", "S2"]
+                },
+                "duration": 15
+            },
+            {
+                "phase": "question",
+                "prompt": "Select the correct sequence:",
+                "options": [
+                    {"id": "A", "sound_file": "/assets/Q4-Easy/sounds/sequence1_2.mp3"},
+                    {"id": "B", "sound_file": "/assets/Q4-Easy/sounds/sequence2_1.wav"}
+                ],
+                "correct": "A",
+                "timer": 30
+            }
+        ],
+        "scoring": {"weights": {"auditory": 0.7, "memory": 0.3}}
+    },
+
+    {
+        "id": "MEM-001",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize these symbols: X, Y, C",
+                "duration": 10
+            },
+            {
+                "phase": "question",
+                "prompt": "Which symbol was NOT present?",
+                "options": [
+                    {"id": "A", "text": "X"},
+                    {"id": "B", "text": "Y"},
+                    {"id": "C", "text": "Z"}
+                ],
+                "correct": "B",
+                "timer": 20
+            }
+        ],
+        "scoring": {"weights": {"memory": 0.9}}
+    },
+
+    {
+        "id": "KNOW-001",
+        "type": "text",
+        "format": "multiple_choice",
+        "prompt": "Capital of Brazil?",
+        "options": [
+            {"id": "A", "text": "Rio de Janeiro"},
+            {"id": "B", "text": "Brasília"},
+            {"id": "C", "text": "São Paulo"}
+        ],
+        "correct": "B",
+        "timer": 20,
+        "scoring": {"weights": {"knowledge": 1.0}}
+    },
+
+    {
+        "id": "ABSTRACT-001",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "Ocean : water :: desert : _____",
+        "correct": "sand",
+        "timer": 25,
+        "scoring": {"weights": {"abstract": 0.7, "logic": 0.3}}
+    },
+
+    {
+        "id": "LOGIC-002",
+        "type": "image",
+        "format": "multiple_choice",
+        "prompt": "Which shape follows the sequence?",
+        "image_url": "/assets/Q8-Easy/shapes/sequence_grid.png",
+        "options": [
+            {"id": "A", "image_url": "/assets/Q8-Easy/options/shapeA.png"},
+            {"id": "B", "image_url": "/assets/Q8-Easy/options/shapeB.png"}
+        ],
+        "correct": "A",
+        "timer": 30,
+        "scoring": {"weights": {"logic": 0.8, "visual": 0.2}}
+    },
+
+    {
+        "id": "COMBO-001",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Listen to these notes:",
+                "content": {
+                    "items": [
+                        {"id": "N1", "sound_file": "/assets/Q9-Easy/sounds/note_C.mp3"},
+                        {"id": "N2", "sound_file": "/assets/Q9-Easy/sounds/note_E.wav"}
+                    ],
+                    "play_order": ["N1", "N2"]
+                },
+                "duration": 12
+            },
+            {
+                "phase": "question",
+                "prompt": "Which option reverses the sequence?",
+                "options": [
+                    {"id": "A", "sound_file": "/assets/Q9-Easy/sounds/notes_C_E.mp3"},
+                    {"id": "B", "sound_file": "/assets/Q9-Easy/sounds/notes_E_C.wav"}
+                ],
+                "correct": "B",
+                "timer": 25
+            }
+        ],
+        "scoring": {"weights": {"auditory": 0.5, "memory": 0.5}}
+    },
+    {
+        "id": "SPATIAL-002",
+        "type": "drawing",
+        "format": "canvas",
+        "prompt": "Rotate this shape 90° clockwise:",
+        "image_url": "/assets/Q10-Easy/shapes/rotate_template.png",
+        "canvas": {"width": 200, "height": 200},
+        "correct": "/assets/Q10-Easy/solutions/rotate_solution.png",
+        "timer": 40,
+        "scoring": {"weights": {"spatial": 0.9}}
+    },
+
+
+    {
+        "id": "MEM-002",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize the order of sounds:",
+                "content": {
+                    "items": [
+                        {"id": "S1", "sound_file": "/assets/Q11-Easy/sounds/dog_bark.mp3"},
+                        {"id": "S2", "sound_file": "/assets/Q11-Easy/sounds/cat_meow.wav"}
+                    ],
+                    "play_order": ["S1", "S2"]
+                },
+                "duration": 15
+            },
+            {
+                "phase": "question",
+                "prompt": "Which order did you hear?",
+                "options": [
+                    {"id": "A", "sound_file": "/assets/Q11-Easy/sounds/dog_cat.mp3"},
+                    {"id": "B", "sound_file": "/assets/Q11-Easy/sounds/cat_dog.wav"}
+                ],
+                "correct": "A",
+                "timer": 20
+            }
+        ],
+        "scoring": {"weights": {"auditory": 0.6, "memory": 0.4}}
+    },
+
+
+    {
+        "id": "VIS-002",
+        "type": "image",
+        "format": "multiple_choice",
+        "prompt": "Which image doesn’t belong?",
+        "image_url": "/assets/Q12-Easy/sets/shapes_set.png",
+        "options": [
+            {"id": "A", "image_url": "/assets/Q12-Easy/options/shapeX.png"},
+            {"id": "B", "image_url": "/assets/Q12-Easy/options/shapeY.png"}
+        ],
+        "correct": "B",
+        "timer": 25,
+        "scoring": {"weights": {"visual": 0.8, "logic": 0.2}}
+    },
+
+
+    {
+        "id": "LOGIC-003",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "Solve: (5 × 4) − 3² = ___",
+        "correct": "11",
+        "timer": 30,
+        "scoring": {"weights": {"logic": 1.0}}
+    },
+
+
+    {
+        "id": "KNOW-002",
+        "type": "text",
+        "format": "multiple_choice",
+        "prompt": "Who invented the telephone?",
+        "options": [
+            {"id": "A", "text": "Thomas Edison"},
+            {"id": "B", "text": "Alexander Graham Bell"},
+            {"id": "C", "text": "Nikola Tesla"}
+        ],
+        "correct": "B",
+        "timer": 20,
+        "scoring": {"weights": {"knowledge": 1.0}}
+    },
+
+
+    {
+        "id": "ABSTRACT-002",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "Time is a _____. Complete the metaphor.",
+        "correct": "thief",
+        "timer": 30,
+        "scoring": {"weights": {"abstract": 0.9}}
+    },
+
+
+    {
+        "id": "VIS-003",
+        "type": "image",
+        "format": "multiple_choice",
+        "prompt": "Assemble the fragments:",
+        "image_url": "/assets/Q16-Easy/jigsaw/puzzle_fragments.png",
+        "options": [
+            {"id": "A", "image_url": "/assets/Q16-Easy/solutions/puzzleA.png"},
+            {"id": "B", "image_url": "/assets/Q16-Easy/solutions/puzzleB.png"}
+        ],
+        "correct": "A",
+        "timer": 40,
+        "scoring": {"weights": {"visual": 0.7, "spatial": 0.3}}
+    },
+
+
+    {
+        "id": "SPATIAL-003",
+        "type": "drawing",
+        "format": "canvas",
+        "prompt": "Draw this 3D shape rotated left:",
+        "image_url": "/assets/Q17-Easy/shapes/3d_template.png",
+        "canvas": {"width": 250, "height": 250},
+        "correct": "/assets/Q17-Easy/solutions/3d_solution.png",
+        "timer": 50,
+        "scoring": {"weights": {"spatial": 0.9}}
+    },
+
+
+    {
+        "id": "MEM-003",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize the order of images:",
+                "image_url": "/assets/Q17-Easy/sequences/image_sequence.png",
+                "duration": 20
+            },
+            {
+                "phase": "question",
+                "prompt": "Which image was third?",
+                "options": [
+                    {"id": "A", "image_url": "/assets/Q17-Easy/options/img1.png"},
+                    {"id": "B", "image_url": "/assets/Q17-Easy/options/img2.png"}
+                ],
+                "correct": "B",
+                "timer": 25
+            }
+        ],
+        "scoring": {"weights": {"memory": 0.8, "visual": 0.2}}
+    },
+
+
+    {
+        "id": "LOGIC-004",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "If all Bloops are Razzies, and no Razzies are Lazzies, can a Bloop be a Lazzie? (Yes/No)",
+        "correct": "No",
+        "timer": 35,
+        "scoring": {"weights": {"logic": 0.9, "abstract": 0.1}}
+    },
+
+
+    {
+        "id": "AUD-002",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize the musical sequence:",
+                "content": {
+                    "items": [
+                        {"id": "N1", "sound_file": "/assets/Q20-Easy/sounds/note_A.wav"},
+                        {"id": "N2", "sound_file": "/assets/Q20-Easy/sounds/note_B.mp3"}
+                    ],
+                    "play_order": ["N1", "N2"]
+                },
+                "duration": 15
+            },
+            {
+                "phase": "question",
+                "prompt": "Which sequence is correct?",
+                "options": [
+                    {"id": "A", "sound_file": "/assets/Q20-Easy/sounds/notes_A_B.wav"},
+                    {"id": "B", "sound_file": "/assets/Q20-Easy/sounds/notes_B_A.mp3"}
+                ],
+                "correct": "A",
+                "timer": 25
+            }
+        ],
+        "scoring": {"weights": {"auditory": 0.7, "memory": 0.3}}
+    },
+
+
+    {
+        "id": "KNOW-003",
+        "type": "text",
+        "format": "multiple_choice",
+        "prompt": "What is H₂O?",
+        "options": [
+            {"id": "A", "text": "Gold"},
+            {"id": "B", "text": "Water"},
+            {"id": "C", "text": "Salt"}
+        ],
+        "correct": "B",
+        "timer": 15,
+        "scoring": {"weights": {"knowledge": 1.0}}
+    },
+
+
+    {
+        "id": "ABSTRACT-003",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "△ : 3 :: □ : ___",
+        "correct": "4",
+        "timer": 25,
+        "scoring": {"weights": {"abstract": 0.8, "logic": 0.2}}
+    },
+
+
+    {
+        "id": "VIS-004",
+        "type": "image",
+        "format": "multiple_choice",
+        "prompt": "Which color completes the gradient?",
+        "image_url": "/assets/colors/gradient_template.png",
+        "options": [
+            {"id": "A", "image_url": "/assets/Q23-Easy/colors/option_red.png"},
+            {"id": "B", "image_url": "/assets/Q23-Easy/colors/option_blue.png"}
+        ],
+        "correct": "A",
+        "timer": 30,
+        "scoring": {"weights": {"visual": 0.9}}
+    },
+
+
+    {
+        "id": "LOGIC-005",
+        "type": "text",
+        "format": "text_input",
+        "prompt": "Next letter: A, D, G, J, ___?",
+        "correct": "M",
+        "timer": 20,
+        "scoring": {"weights": {"logic": 1.0}}
+    },
+
+
+    {
+        "id": "SPATIAL-004",
+        "type": "drawing",
+        "format": "canvas",
+        "prompt": "Complete the symmetrical half:",
+        "image_url": "/assets/Q25-Easy/shapes/symmetry_template.png",
+        "canvas": {"width": 300, "height": 150},
+        "correct": "/assets/Q25-Easy/solutions/symmetry_solution.png",
+        "timer": 40,
+        "scoring": {"weights": {"spatial": 0.8, "visual": 0.2}}
+    },
+
+
+    {
+        "id": "MEM-004",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize this number: 7391",
+                "duration": 5
+            },
+            {
+                "phase": "question",
+                "prompt": "Enter it in reverse:",
+                "correct": "1937",
+                "timer": 15
+            }
+        ],
+        "scoring": {"weights": {"memory": 0.9}}
+    },
+
+
+    {
+        "id": "AUD-003",
+        "type": "memory",
+        "format": "phased",
+        "phases": [
+            {
+                "phase": "memorization",
+                "prompt": "Memorize the animal order:",
+                "content": {
+                    "items": [
+                        {"id": "S1", "sound_file": "/assets/Q27-Easy/sounds/lion.mp3"},
+                        {"id": "S2", "sound_file": "/assets/Q27-Easy/sounds/bird.mp3"}
+                    ],
+                    "play_order": ["S1", "S2"]
+                },
+                "duration": 8
+            },
+            {
+                "phase": "question",
+                "prompt": "Which order did you hear?",
+                "options": [
+                    {"id": "A", "sound_file": "/assets/Q27-Easy/sounds/lion_bird.mp3"},
+                    {"id": "B", "sound_file": "/assets/Q27-Easy/sounds/bird_lion.mp3"}
+                ],
+                "correct": "A",
+                "timer": 15
+            }
+        ],
+        "scoring": {"weights": {"auditory": 0.6, "memory": 0.4}}
+    }
+]
